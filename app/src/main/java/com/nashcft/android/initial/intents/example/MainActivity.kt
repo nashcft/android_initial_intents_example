@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             startActivity(Intent.createChooser(
+                // From: https://issuetracker.google.com/issues/134367295#comment6
                 when {
                     Build.VERSION.SDK_INT > Build.VERSION_CODES.P || Build.VERSION.CODENAME == "Q" -> intent
                     Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> Intent()
